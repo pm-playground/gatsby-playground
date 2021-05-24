@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+  color: black;
+  text-decoration: none;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  background: radial-gradient(at top left, lime, limegreen );
+  background-repeat: no-repeat;
+}
+
+p {
+  margin: 16px auto;
+  line-height: 1.5em;
+}
+
+/* layout and nav */
+
+.layout {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav {
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  margin: 40px auto;
+  padding: 0 1em;
+}
+
+nav .links {
+  display: inline-block;
+  text-align: right;
+}
+
+nav a {
+  display: inline-block;
+  margin-left: 20px;
+  font-weight: 900;
+  padding: 8px ;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid transparent;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  border-color: black;
+  color: white;
+}
