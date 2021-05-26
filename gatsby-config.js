@@ -15,6 +15,13 @@ module.exports = {
         path: `${__dirname}/src/content/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `leistungen`,
+        path: `${__dirname}/src/leistungen/`,
+      },
+    },
   ],
   siteMetadata: {
     title: "ITcreate test page",

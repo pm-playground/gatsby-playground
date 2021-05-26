@@ -13,6 +13,7 @@ export default function Navbar() {
         <Link to='/service'>Service</Link>
         <Link to='/partner'>Partner</Link>
         <Link to='/contact'>Contact</Link>
+        <Link to='/leistungen'>Leistungen</Link>
       </div>     
     </nav>
   )
