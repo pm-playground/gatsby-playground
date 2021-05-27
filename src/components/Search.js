@@ -1,9 +1,9 @@
 // https://www.gatsbyjs.com/docs/adding-search-with-js-search/
-
-import React, { Component } from 'react'
-import * as styles from '../styles/search.module.css'
-import Axios from 'axios'
-import * as JsSearch from 'js-search'
+//! NEED TO REVISIT THIS
+import React, { Component } from "react"
+import * as styles from "../styles/search.module.css"
+import Axios from "axios"
+import * as JsSearch from "js-search"
 
 export default class Search extends Component {
   state = {
@@ -22,15 +22,15 @@ export default class Search extends Component {
         this.rebuildIndex()
       })
       .catch(err => {
-        this.setState({isError: true})
+        this.setState({ isError: true })
         console.log("====================================")
         console.log(`Something bad happened while fetching the data\n${err}`)
         console.log("====================================")
       })
   }
   rebuildIndex = () => {
-    const {bookList} = this.state
-    const dataToSearch = new JsSearch.Search('isbn')
+    const { bookList } = this.state
+    const dataToSearch = new JsSearch.Search("isbn")
 
     dataToSearch.indexStrategy = new JsSearch.PrefixIndexStrategy()
     dataToSearch.sanitizer = new JsSearch.LowerCaseSanitizer()
@@ -44,13 +44,12 @@ export default class Search extends Component {
   searchData = e => {
     const { search } = this.state
     const queryResult = search.search(e.target.value)
-    this.setState({searchQuery: e.target.value, searchResults: queryResult})
+    this.setState({ searchQuery: e.target.value, searchResults: queryResult })
   }
 
   handleSubmit = e => {
     e.preventDefault()
   }
-
 
   render() {
     const { bookList, searchResults, searchQuery } = this.state
@@ -162,4 +161,3 @@ export default class Search extends Component {
     )
   }
 }
-
