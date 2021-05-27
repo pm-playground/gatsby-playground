@@ -14,9 +14,11 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "gatsby": "^3.4.1",
     "gatsby-source-filesystem": "^3.5.0",
     "gatsby-transformer-remark": "^4.2.0",
+    "js-search": "^2.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
